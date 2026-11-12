@@ -1,0 +1,26 @@
+name: CI
+
+# Manual only: deployment is done by the Plesk Git webhook, not by this workflow.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies (from lock)
+        run: npm ci
+
+      - name: Type check and build
+        run: npm run build
