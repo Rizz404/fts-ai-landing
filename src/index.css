@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-fts-navy antialiased;
+  }
+
+  section[id],
+  [id="cafe-ai"],
+  [id="other-challenges"] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-fts-sky ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-fts-sky-strong;
+  }
+
+  .tile-hover {
+    @apply transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_12px_28px_-16px_rgba(16,35,66,0.35)];
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 450ms ease-out,
+      transform 450ms ease-out;
+  }
+
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile-hover {
+    @apply hover:translate-y-0;
+  }
+}

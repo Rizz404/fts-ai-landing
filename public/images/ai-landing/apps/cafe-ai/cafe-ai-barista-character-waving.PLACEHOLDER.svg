@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <!-- PLACEHOLDER — replace with final artwork. Spec: IMAGES-TO-GENERATE.md → cafe-ai-barista-character-waving -->
+  <title>PLACEHOLDER: Cafe AI Barista character waving</title>
+  <rect width="600" height="800" fill="#FFF5E8"/>
+  <rect x="12" y="12" width="576" height="776" rx="28" fill="none" stroke="#C8643C" stroke-width="4" stroke-dasharray="18 12"/>
+  <!-- simple silhouette -->
+  <g fill="#E9CDB3">
+    <circle cx="300" cy="250" r="92"/>
+    <path d="M150 800 C 150 520, 190 400, 300 400 C 410 400, 450 520, 450 800 Z"/>
+    <path d="M178 440 C 140 380, 120 300, 132 230 L 168 226 C 166 300, 186 360, 214 412 Z"/>
+    <ellipse cx="148" cy="210" rx="34" ry="42"/>
+  </g>
+  <path d="M225 470 L 375 470 L 395 800 L 205 800 Z" fill="#5B3A29" opacity="0.55"/>
+  <circle cx="300" cy="560" r="20" fill="#E0A458" opacity="0.8"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="90" y="610" width="420" height="132" rx="18" fill="#ffffff" opacity="0.92"/>
+    <text x="300" y="652" font-size="26" font-weight="800" fill="#A84E2A">PLACEHOLDER</text>
+    <text x="300" y="686" font-size="18" font-weight="600" fill="#102342">AI Barista character, waving</text>
+    <text x="300" y="716" font-size="15" fill="#475569">600 × 800 · transparent WebP</text>
+  </g>
+</svg>
