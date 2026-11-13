@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Inter", "Noto Sans JP", "system-ui", "sans-serif"],
       },
       colors: {
         fts: {
