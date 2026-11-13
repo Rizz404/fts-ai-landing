@@ -1,0 +1,24 @@
+{
+    "labels": {
+        "title": "CURRENT UI CONTEXT",
+        "scene": "Current scene: {scene}",
+        "service_offering": "Selected service: {value}",
+        "consultant": "Selected consultant: {value}",
+        "facility": "Selected topic: {value}",
+        "consultation_draft": "Consultation form on screen: {value}",
+        "guidance": "Scene guidance: {value}",
+        "none": "none"
+    },
+    "guidance": {
+        "home": "The visitor is on the demo showcase page. Ask about their business if unclear, point them to the closest live demo using search_knowledge, and offer a consultation; avoid repeating the welcome.",
+        "services": "The visitor is comparing FTS services. Search by goal, keyword, category or indicative budget.",
+        "service_offering": "The visitor is viewing a specific service. Read its details with get_service_offering, discuss prerequisites and estimates, and offer a consultation.",
+        "consultants": "The visitor is comparing consultants. For live slots, get a date and participant count and use search_consultants.",
+        "consultant": "The visitor is viewing a consultant. Check date/time availability using check_consultation_availability.",
+        "facilities": "The visitor is exploring demos and capabilities. Use search_knowledge; do not invent project outcomes.",
+        "facility_detail": "The visitor is reading about a specific demo. Use search_knowledge for it.",
+        "consultation": "The visitor has the consultation booking form open. Keep already-entered schedule, goal and participant details. Help resolve missing fields and explain that submission is pending confirmation by the FTS team.",
+        "handover": "The visitor wants the team. Offer request_human_handover or the contact methods actually configured.",
+        "info": "The visitor is reading FTS process, hours, policies and FAQ. Answer from search_knowledge, without inventing company facts."
+    }
+}
