@@ -1,0 +1,84 @@
+/* The public landing page's own stylesheet (FTS brand). The admin uses resources/css/app.css. */
+@import 'tailwindcss';
+
+@source './';
+
+@theme {
+    --font-sans: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+
+    /* #0EA5E9 is the FTS brand blue; use sky-strong where text needs 4.5:1 contrast. */
+    --color-fts-sky: #0ea5e9;
+    --color-fts-sky-strong: #0277b6;
+    --color-fts-sky-soft: #e0f2fe;
+    --color-fts-blue: #1e40af;
+    --color-fts-navy: #102342;
+    --color-fts-mist: #f1f7fc;
+    --color-fts-paper: #fff8ee;
+    --color-fts-red: #e5243b;
+    --color-fts-ink: #475569;
+    --color-fts-line: #dce6f0;
+    --color-fts-green: #0f8a63;
+
+    --container-page: 1292px;
+}
+
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        @apply bg-white font-sans text-fts-navy antialiased;
+    }
+
+    section[id] {
+        scroll-margin-top: 4.5rem;
+    }
+
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+
+    :focus-visible {
+        @apply outline-none ring-2 ring-fts-sky ring-offset-2 ring-offset-white;
+    }
+}
+
+/* Markup produced by renderChatText (resources/js/shared/chat-text.js) inside a chat bubble. */
+@layer components {
+    .chat-text > * + * {
+        margin-top: 0.5rem;
+    }
+
+    .chat-text ul,
+    .chat-text ol {
+        padding-left: 1.1rem;
+    }
+
+    .chat-text ul {
+        list-style: disc;
+    }
+
+    .chat-text ol {
+        list-style: decimal;
+    }
+
+    .chat-text strong {
+        font-weight: 600;
+    }
+}
+
+@utility eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-fts-sky-strong;
+}
+
+@utility tile-hover {
+    @apply transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_12px_28px_-16px_rgba(16,35,66,0.35)] motion-reduce:hover:translate-y-0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
