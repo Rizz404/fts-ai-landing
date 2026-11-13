@@ -39,7 +39,7 @@ const Hero = ({ onAskAi }: { onAskAi: () => void }) => {
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#demos"
+              href="#solutions"
               className="inline-flex items-center justify-center gap-3 rounded-xl bg-fts-sky-strong px-6 py-3.5 font-semibold text-white transition-colors hover:bg-fts-blue"
             >
               {t.hero.primary}

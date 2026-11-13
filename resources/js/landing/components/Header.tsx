@@ -19,6 +19,7 @@ const Header = ({ page }: { page: "home" | "consultation" }) => {
 
         <nav aria-label="Main" className="hidden md:block">
           <ul className="flex items-center gap-7 text-sm text-fts-ink">
+            <li><a href={pageUrl("/", lang, "#solutions")} className="hover:text-fts-navy">{t.nav.solutions}</a></li>
             <li><a href={pageUrl("/", lang, "#demos")} className="hover:text-fts-navy">{t.nav.demos}</a></li>
             <li><a href={pageUrl("/", lang, "#how")} className="hover:text-fts-navy">{t.nav.how}</a></li>
             <li>

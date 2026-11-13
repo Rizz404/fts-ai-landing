@@ -9,6 +9,7 @@ import Features from "./sections/Features";
 import FinalCta from "./sections/FinalCta";
 import Hero from "./sections/Hero";
 import HowItWorks from "./sections/HowItWorks";
+import Solutions from "./sections/Solutions";
 
 const page = window.FTS_PAGE ?? "home";
 
@@ -32,6 +33,7 @@ const App = () => {
         ) : (
           <>
             <Hero onAskAi={askAi} />
+            <Solutions />
             <Demos />
             <Features />
             <HowItWorks />
