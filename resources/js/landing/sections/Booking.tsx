@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react';
 import { CalendarCheck, Check, MessageCircle } from 'lucide-react';
 import { api, chatToken, landingConfig, type ConsultationCreated, type ConsultationOptions, type ValidationFailure } from '../api';
+import { character } from '../content/character';
 import { useLang } from '../i18n/lang';
 
 type ContactType = 'whatsapp' | 'phone' | 'email';
@@ -169,6 +170,15 @@ const Booking = ({ onAskAi }: { onAskAi: () => void }) => {
                         <MessageCircle aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
                         {b.askAi}
                     </button>
+                    {/* Desktop only: the form is long, so the character fills the side column. */}
+                    <img
+                        src={character.tablet.src}
+                        alt={a.chat.characterAlt}
+                        width={character.tablet.width}
+                        height={character.tablet.height}
+                        loading="lazy"
+                        className="mt-8 hidden w-full max-w-[300px] lg:block"
+                    />
                 </div>
 
                 <div className="min-w-0">

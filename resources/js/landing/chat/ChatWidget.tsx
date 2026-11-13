@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { CalendarCheck, RotateCcw, Send, X } from 'lucide-react';
 import { renderChatText } from '../../shared/chat-text.js';
-import { ftsLogo, links, pageUrl } from '../content/links';
+import { character } from '../content/character';
+import { links, pageUrl } from '../content/links';
 import { useLang } from '../i18n/lang';
 import ChatCards from './ChatCards';
 import { useChat } from './useChat';
@@ -12,9 +13,13 @@ type Props = {
 };
 
 const Avatar = ({ size = 'h-9 w-9' }: { size?: string }) => (
-    <span className={`flex ${size} shrink-0 items-center justify-center rounded-full bg-white ring-1 ring-fts-line`}>
-        <img src={ftsLogo} alt="" width={24} height={24} className="h-3/5 w-3/5 object-contain" />
-    </span>
+    <img
+        src={character.avatar.src}
+        alt=""
+        width={character.avatar.width}
+        height={character.avatar.height}
+        className={`${size} shrink-0 rounded-full bg-fts-sky-soft object-cover ring-1 ring-fts-line`}
+    />
 );
 
 /**

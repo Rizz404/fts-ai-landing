@@ -30,6 +30,8 @@ const en = {
     bookForm: "Use the booking form",
     disclaimer: "AI answers can be wrong. The team confirms every booking.",
     unavailable: "The chat is not available right now. Please contact FTS directly.",
+    heroBubble: "Hi! Tell me about your business and I'll show you the demo that fits.",
+    characterAlt: "The FTS AI Consultant waving hello",
   },
   booking: {
     eyebrow: "Free consultation",
@@ -110,6 +112,8 @@ const id: AssistantStrings = {
     bookForm: "Pakai formulir pemesanan",
     disclaimer: "Jawaban AI bisa keliru. Tim mengonfirmasi setiap pemesanan.",
     unavailable: "Chat sedang tidak tersedia. Silakan hubungi FTS langsung.",
+    heroBubble: "Halo! Ceritakan usaha Anda, saya tunjukkan demo yang paling cocok.",
+    characterAlt: "AI Consultant FTS melambaikan tangan",
   },
   booking: {
     eyebrow: "Konsultasi gratis",
@@ -188,6 +192,8 @@ const ja: AssistantStrings = {
     bookForm: "予約フォームを使う",
     disclaimer: "AIの回答は誤る場合があります。予約はすべてスタッフが確定します。",
     unavailable: "現在チャットはご利用いただけません。FTSへ直接お問い合わせください。",
+    heroBubble: "こんにちは。御社の業種を教えていただければ、合うデモをご案内します。",
+    characterAlt: "手を振るFTSのAIコンサルタント",
   },
   booking: {
     eyebrow: "無料相談",
