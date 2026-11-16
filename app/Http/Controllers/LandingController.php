@@ -6,7 +6,7 @@ use App\Models\Company;
 use Illuminate\Contracts\View\View;
 
 /**
- * The public pages: the demo showcase and the consultation booking page. Both are
+ * The public pages: the demo showcase, its landing page version (/lp) and the consultation booking page. All are
  * the same React app (resources/js/landing); this hands it the page to show and
  * the endpoints of the AI Consultant chat and the booking form.
  */
@@ -20,6 +20,12 @@ class LandingController extends Controller
     public function consultation(): View
     {
         return $this->page('consultation');
+    }
+
+    /** The landing page version of the showcase: same content, no demo or outbound links. */
+    public function lp(): View
+    {
+        return $this->page('lp');
     }
 
     private function page(string $page): View

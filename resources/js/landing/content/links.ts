@@ -6,7 +6,7 @@ export const links = {
 export const ftsLogo = "/images/ai-landing/global/fts-logo.webp";
 
 // Pages of this site, keeping the chosen language in the URL.
-export const pageUrl = (path: "/" | "/consultation", lang: string, hash = "") => `${path}?lang=${lang}${hash}`;
+export const pageUrl = (path: "/" | "/lp" | "/consultation", lang: string, hash = "") => `${path}?lang=${lang}${hash}`;
 
 // The interactive site with the AI Concierge character (Version 2, maintained separately).
 // It has no per-industry page yet, so every industry opens its AI Solutions list.

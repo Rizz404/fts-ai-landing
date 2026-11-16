@@ -4,6 +4,7 @@ import { renderChatText } from '../../shared/chat-text.js';
 import { character } from '../content/character';
 import { links, pageUrl } from '../content/links';
 import { useLang } from '../i18n/lang';
+import { isLp } from '../page';
 import ChatCards from './ChatCards';
 import { useChat } from './useChat';
 
@@ -122,9 +123,13 @@ const ChatWidget = ({ open, onOpenChange }: Props) => {
                         {!chat.available ? (
                             <p className="rounded-2xl bg-white p-4 text-sm text-fts-ink">
                                 {a.chat.unavailable}{' '}
-                                <a href={links.contact} className="font-semibold text-fts-blue underline">
-                                    fts-tech.co.id/contact
-                                </a>
+                                {isLp ? (
+                                    <span className="font-semibold text-fts-navy">fts-tech.co.id/contact</span>
+                                ) : (
+                                    <a href={links.contact} className="font-semibold text-fts-blue underline">
+                                        fts-tech.co.id/contact
+                                    </a>
+                                )}
                             </p>
                         ) : (
                             <>

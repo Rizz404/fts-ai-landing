@@ -17,7 +17,7 @@ declare global {
     interface Window {
         FTS_LANDING?: LandingConfig;
         // Which page the server rendered (routes/web.php).
-        FTS_PAGE?: 'home' | 'consultation';
+        FTS_PAGE?: 'home' | 'consultation' | 'lp';
     }
 }
 

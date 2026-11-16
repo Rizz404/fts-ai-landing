@@ -22,23 +22,37 @@ export const demoImage = (demo: Demo) => `/images/demos/${demo.id}.webp`;
 export const demoHref = (demo: Demo, lang: Lang) =>
   `${demo.url}?lang=${demo.brokenLangs?.includes(lang) ? "id" : lang}`;
 
+// The first three are the featured demos (shown first on both the showcase and the LP).
 export const demos: Demo[] = [
   {
-    id: "cafe-ai",
-    name: "Cafe AI",
-    url: "https://cafe-ai.fts-tech.co.id/cafe-ai",
-    category: "food",
-    industry: { en: "Cafe", id: "Kafe", ja: "カフェ" },
-    role: { en: "AI Barista", id: "Barista AI", ja: "AIバリスタ" },
+    id: "wedding-venue-ai",
+    name: "Wedding AI",
+    url: "https://wedding-venue-ai.fts-tech.co.id/fts-wedding-venue-ai",
+    category: "venues",
+    industry: { en: "Wedding venue", id: "Gedung pernikahan", ja: "結婚式場" },
+    role: { en: "AI Wedding Concierge", id: "Concierge pernikahan AI", ja: "AIウェディングコンシェルジュ" },
     tasks: {
-      en: ["Menu", "Seating", "Reserve a table"],
-      id: ["Menu", "Tempat duduk", "Reservasi meja"],
-      ja: ["メニュー", "座席", "テーブル予約"],
+      en: ["Halls", "Wedding services", "Hold your date"],
+      id: ["Hall", "Layanan pernikahan", "Kunci tanggal"],
+      ja: ["会場", "ウェディングサービス", "日程の仮予約"],
+    },
+  },
+  {
+    id: "hotel-ai",
+    name: "Hotel AI",
+    url: "https://hotel-ai.fts-tech.co.id/fts-hotel-ai",
+    category: "stay",
+    industry: { en: "Hotel", id: "Hotel", ja: "ホテル" },
+    role: { en: "AI Concierge", id: "Concierge AI", ja: "AIコンシェルジュ" },
+    tasks: {
+      en: ["Rooms & suites", "Facilities", "Reservations"],
+      id: ["Kamar & suite", "Fasilitas", "Reservasi"],
+      ja: ["客室", "施設", "予約"],
     },
   },
   {
     id: "restaurant-ai",
-    name: "FTS Restaurant AI",
+    name: "Restaurant AI",
     url: "https://restaurant-ai.fts-tech.co.id/",
     category: "food",
     industry: { en: "Restaurant", id: "Restoran", ja: "レストラン" },
@@ -50,16 +64,16 @@ export const demos: Demo[] = [
     },
   },
   {
-    id: "hotel-ai",
-    name: "FTS Hotel AI",
-    url: "https://hotel-ai.fts-tech.co.id/fts-hotel-ai",
-    category: "stay",
-    industry: { en: "Hotel", id: "Hotel", ja: "ホテル" },
-    role: { en: "AI Concierge", id: "Concierge AI", ja: "AIコンシェルジュ" },
+    id: "cafe-ai",
+    name: "Cafe AI",
+    url: "https://cafe-ai.fts-tech.co.id/cafe-ai",
+    category: "food",
+    industry: { en: "Cafe", id: "Kafe", ja: "カフェ" },
+    role: { en: "AI Barista", id: "Barista AI", ja: "AIバリスタ" },
     tasks: {
-      en: ["Rooms & suites", "Facilities", "Reservations"],
-      id: ["Kamar & suite", "Fasilitas", "Reservasi"],
-      ja: ["客室", "施設", "予約"],
+      en: ["Menu", "Seating", "Reserve a table"],
+      id: ["Menu", "Tempat duduk", "Reservasi meja"],
+      ja: ["メニュー", "座席", "テーブル予約"],
     },
   },
   {
@@ -138,19 +152,6 @@ export const demos: Demo[] = [
       en: ["Spaces", "Facilities", "Reservation"],
       id: ["Ruang", "Fasilitas", "Reservasi"],
       ja: ["スペース", "施設", "予約"],
-    },
-  },
-  {
-    id: "wedding-venue-ai",
-    name: "FTS Wedding Venue AI",
-    url: "https://wedding-venue-ai.fts-tech.co.id/fts-wedding-venue-ai",
-    category: "venues",
-    industry: { en: "Wedding venue", id: "Gedung pernikahan", ja: "結婚式場" },
-    role: { en: "AI Wedding Concierge", id: "Concierge pernikahan AI", ja: "AIウェディングコンシェルジュ" },
-    tasks: {
-      en: ["Halls", "Services", "Reservation"],
-      id: ["Hall", "Layanan", "Reservasi"],
-      ja: ["会場", "サービス", "予約"],
     },
   },
   {

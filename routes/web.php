@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingController::class, 'home'])->name('home');
 Route::get('consultation', [LandingController::class, 'consultation'])->name('consultation');
+Route::get('lp', [LandingController::class, 'lp'])->name('lp');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('guest')->group(function () {

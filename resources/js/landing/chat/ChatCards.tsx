@@ -1,6 +1,7 @@
 import { CalendarCheck, MessageCircle, UserRound } from 'lucide-react';
 import type { UiPayload } from '../api';
 import { useLang } from '../i18n/lang';
+import { isLp } from '../page';
 
 type Handover = { whatsapp_url?: string | null; email_url?: string | null };
 
@@ -44,7 +45,7 @@ const ChatCards = ({ payloads, bookingUrl }: { payloads: UiPayload[]; bookingUrl
                             <p className="text-fts-ink">
                                 {[consultation.name, date, consultation.time_range].filter(Boolean).join(' · ')}
                             </p>
-                            {handover.whatsapp_url && (
+                            {handover.whatsapp_url && !isLp && (
                                 <a
                                     href={handover.whatsapp_url}
                                     target="_blank"

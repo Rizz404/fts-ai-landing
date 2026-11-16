@@ -3,6 +3,7 @@ import ChatWidget from "./chat/ChatWidget";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { useLang } from "./i18n/lang";
+import { page } from "./page";
 import Booking from "./sections/Booking";
 import Demos from "./sections/Demos";
 import Features from "./sections/Features";
@@ -10,8 +11,6 @@ import FinalCta from "./sections/FinalCta";
 import Hero from "./sections/Hero";
 import HowItWorks from "./sections/HowItWorks";
 import Solutions from "./sections/Solutions";
-
-const page = window.FTS_PAGE ?? "home";
 
 const App = () => {
   const { t } = useLang();
@@ -33,7 +32,7 @@ const App = () => {
         ) : (
           <>
             <Hero onAskAi={askAi} />
-            <Solutions />
+            <Solutions onAskAi={askAi} />
             <Demos />
             <Features />
             <HowItWorks />

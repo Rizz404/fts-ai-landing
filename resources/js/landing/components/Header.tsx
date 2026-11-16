@@ -3,14 +3,16 @@ import { useLang } from "../i18n/lang";
 import { ftsLogo, pageUrl } from "../content/links";
 import LangSwitch from "./LangSwitch";
 
-const Header = ({ page }: { page: "home" | "consultation" }) => {
+const Header = ({ page }: { page: "home" | "consultation" | "lp" }) => {
   const { lang, t } = useLang();
   const onConsultation = page === "consultation";
+  // The LP keeps visitors on itself; the other pages share the showcase at "/".
+  const home = page === "lp" ? "/lp" : "/";
 
   return (
     <header className="sticky top-0 z-40 border-b border-fts-line/70 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-page items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
-        <a href={pageUrl("/", lang)} className="flex shrink-0 items-center gap-2 rounded-md">
+        <a href={pageUrl(home, lang)} className="flex shrink-0 items-center gap-2 rounded-md">
           <img src={ftsLogo} alt="" width={28} height={28} className="h-7 w-7 object-contain" />
           <span className="text-base font-bold tracking-tight sm:text-lg">
             Fujiyama <span className="font-semibold text-fts-sky-strong">AI</span>
@@ -19,9 +21,9 @@ const Header = ({ page }: { page: "home" | "consultation" }) => {
 
         <nav aria-label="Main" className="hidden md:block">
           <ul className="flex items-center gap-7 text-sm text-fts-ink">
-            <li><a href={pageUrl("/", lang, "#solutions")} className="hover:text-fts-navy">{t.nav.solutions}</a></li>
-            <li><a href={pageUrl("/", lang, "#demos")} className="hover:text-fts-navy">{t.nav.demos}</a></li>
-            <li><a href={pageUrl("/", lang, "#how")} className="hover:text-fts-navy">{t.nav.how}</a></li>
+            <li><a href={pageUrl(home, lang, "#solutions")} className="hover:text-fts-navy">{t.nav.solutions}</a></li>
+            <li><a href={pageUrl(home, lang, "#demos")} className="hover:text-fts-navy">{t.nav.demos}</a></li>
+            <li><a href={pageUrl(home, lang, "#how")} className="hover:text-fts-navy">{t.nav.how}</a></li>
             <li>
               <a
                 href={pageUrl("/consultation", lang)}

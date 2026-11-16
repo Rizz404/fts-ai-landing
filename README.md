@@ -27,6 +27,10 @@ npm run build
 
 The AI solutions section (`resources/js/landing/sections/Solutions.tsx`) sends each industry category to the interactive site with the AI character (https://fts-ai-lp.fts-tech.co.id/, maintained separately) in the same language. The direct demo links stay in "Browse the demos" below it.
 
+The first three demos (Wedding AI, Hotel AI, Restaurant AI) are featured: they lead the list and the hero previews.
+
+`/lp` is the landing page version for ads (`window.FTS_PAGE = "lp"`, see `resources/js/landing/page.ts`). It renders the same showcase without demo links or other outbound links; the AI Consultant chat and the consultation page stay available.
+
 Demo links open in a new tab with the same language (`?lang=`). Set `brokenLangs` on a demo whose live site fails in a language; that demo then opens in Indonesian instead.
 
 ## Deployment
