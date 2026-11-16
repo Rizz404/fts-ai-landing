@@ -124,7 +124,7 @@ const ChatWidget = ({ open, onOpenChange }: Props) => {
                             <p className="rounded-2xl bg-white p-4 text-sm text-fts-ink">
                                 {a.chat.unavailable}{' '}
                                 {isLp ? (
-                                    <span className="font-semibold text-fts-navy">fts-tech.co.id/contact</span>
+                                    <span className="font-semibold text-fts-blue underline">fts-tech.co.id/contact</span>
                                 ) : (
                                     <a href={links.contact} className="font-semibold text-fts-blue underline">
                                         fts-tech.co.id/contact

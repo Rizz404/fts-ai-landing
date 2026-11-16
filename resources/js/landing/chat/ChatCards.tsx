@@ -1,7 +1,7 @@
 import { CalendarCheck, MessageCircle, UserRound } from 'lucide-react';
 import type { UiPayload } from '../api';
 import { useLang } from '../i18n/lang';
-import { isLp } from '../page';
+import LinkOrBox from '../components/LinkOrBox';
 
 type Handover = { whatsapp_url?: string | null; email_url?: string | null };
 
@@ -45,16 +45,15 @@ const ChatCards = ({ payloads, bookingUrl }: { payloads: UiPayload[]; bookingUrl
                             <p className="text-fts-ink">
                                 {[consultation.name, date, consultation.time_range].filter(Boolean).join(' · ')}
                             </p>
-                            {handover.whatsapp_url && !isLp && (
-                                <a
+                            {handover.whatsapp_url && (
+                                <LinkOrBox
                                     href={handover.whatsapp_url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    newTab
                                     className="mt-2 inline-flex items-center gap-1.5 font-semibold text-fts-blue hover:underline"
                                 >
                                     <MessageCircle aria-hidden className="h-4 w-4" />
                                     {a.chat.whatsapp}
-                                </a>
+                                </LinkOrBox>
                             )}
                         </div>
                     );

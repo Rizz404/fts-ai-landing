@@ -100,15 +100,6 @@ const en = {
     site: "FTS website",
     contact: "Contact",
   },
-  // Copy for the landing page version (/lp), which has no outbound links.
-  lp: {
-    heroLead:
-      "Meet the AI staff we built for 16 kinds of business: a wedding concierge, a hotel concierge, a restaurant host and more. Ask our AI Consultant which one fits you.",
-    solutionsLead: "AI staff for every industry, each with its own role and the tasks it handles for your guests.",
-    demosLead:
-      "Each demo is a sample business run by an AI assistant: it chats with guests, shows what the business offers and takes booking requests.",
-    tourBody: "Tell our AI Consultant about your business and it will suggest the AI staff that fits.",
-  },
 };
 
 export type Strings = typeof en;
@@ -217,14 +208,6 @@ const id: Strings = {
     site: "Situs FTS",
     contact: "Kontak",
   },
-  lp: {
-    heroLead:
-      "Kenali staf AI yang kami bangun untuk 16 jenis usaha: concierge pernikahan, concierge hotel, host restoran, dan lainnya. Tanya AI Consultant kami mana yang cocok untuk Anda.",
-    solutionsLead: "Staf AI untuk setiap industri, masing-masing dengan peran dan tugasnya sendiri untuk melayani tamu Anda.",
-    demosLead:
-      "Setiap demo adalah contoh usaha yang dilayani asisten AI: mengobrol dengan tamu, menampilkan penawaran usaha, dan menerima permintaan pemesanan.",
-    tourBody: "Ceritakan usaha Anda kepada AI Consultant kami, dan ia akan menyarankan staf AI yang cocok.",
-  },
 };
 
 const ja: Strings = {
@@ -323,13 +306,6 @@ const ja: Strings = {
     note: "デモに登場する店舗・料金・データはサンプルです。",
     site: "FTSウェブサイト",
     contact: "お問い合わせ",
-  },
-  lp: {
-    heroLead:
-      "ウェディングコンシェルジュ、ホテルのコンシェルジュ、レストランのホストなど、16業種向けにFTSがつくったAIスタッフをご紹介します。どのAIスタッフが合うか、AIコンサルタントにお尋ねください。",
-    solutionsLead: "業種ごとのAIスタッフが、それぞれの役割と業務でお客様に対応します。",
-    demosLead: "各デモは、AIアシスタントが接客するサンプル店舗です。お客様と会話し、サービス内容を紹介し、予約リクエストを受け付けます。",
-    tourBody: "御社のビジネスについてAIコンサルタントにお聞かせください。合うAIスタッフをご提案します。",
   },
 };
 

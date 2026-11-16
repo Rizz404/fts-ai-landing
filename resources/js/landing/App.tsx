@@ -32,7 +32,7 @@ const App = () => {
         ) : (
           <>
             <Hero onAskAi={askAi} />
-            <Solutions onAskAi={askAi} />
+            <Solutions />
             <Demos />
             <Features />
             <HowItWorks />

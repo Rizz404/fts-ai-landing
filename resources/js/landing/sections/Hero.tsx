@@ -2,7 +2,7 @@ import { ArrowDown, Check, MessageCircle } from "lucide-react";
 import { character } from "../content/character";
 import { demoHref, demoImage, demos } from "../content/demos";
 import { useLang } from "../i18n/lang";
-import { isLp } from "../page";
+import LinkOrBox from "../components/LinkOrBox";
 
 const previewIds = ["wedding-venue-ai", "hotel-ai", "restaurant-ai"];
 
@@ -36,7 +36,7 @@ const Hero = ({ onAskAi }: { onAskAi: () => void }) => {
               </span>
             ))}
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-fts-ink sm:text-lg">{isLp ? t.lp.heroLead : t.hero.lead}</p>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-fts-ink sm:text-lg">{t.hero.lead}</p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a
@@ -81,11 +81,16 @@ const Hero = ({ onAskAi }: { onAskAi: () => void }) => {
 
         {/* Real demo screenshots, with the AI Consultant character standing in front. */}
         <div className="relative mx-auto hidden aspect-[16/11] w-full max-w-xl sm:block">
-          {previews.map((demo, index) => {
-            const className = `absolute w-[64%] overflow-hidden rounded-2xl border-4 border-white bg-white shadow-[0_24px_48px_-24px_rgba(16,35,66,0.45)] transition-transform duration-300 hover:-translate-y-1 ${
-              ["left-0 top-0 rotate-[-3deg]", "left-[22%] top-[16%] rotate-[2deg]", "bottom-[4%] left-[6%] rotate-[-1deg]"][index]
-            }`;
-            const image = (
+          {previews.map((demo, index) => (
+            <LinkOrBox
+              key={demo.id}
+              href={demoHref(demo, lang)}
+              newTab
+              hidden
+              className={`absolute w-[64%] overflow-hidden rounded-2xl border-4 border-white bg-white shadow-[0_24px_48px_-24px_rgba(16,35,66,0.45)] transition-transform duration-300 hover:-translate-y-1 ${
+                ["left-0 top-0 rotate-[-3deg]", "left-[22%] top-[16%] rotate-[2deg]", "bottom-[4%] left-[6%] rotate-[-1deg]"][index]
+              }`}
+            >
               <img
                 src={demoImage(demo)}
                 alt=""
@@ -94,26 +99,8 @@ const Hero = ({ onAskAi }: { onAskAi: () => void }) => {
                 loading="eager"
                 className="aspect-[16/10] w-full object-cover"
               />
-            );
-
-            return isLp ? (
-              <div key={demo.id} aria-hidden className={className}>
-                {image}
-              </div>
-            ) : (
-              <a
-                key={demo.id}
-                href={demoHref(demo, lang)}
-                target="_blank"
-                rel="noopener noreferrer"
-                tabIndex={-1}
-                aria-hidden
-                className={className}
-              >
-                {image}
-              </a>
-            );
-          })}
+            </LinkOrBox>
+          ))}
 
           <img
             src={character.greeting.src}
