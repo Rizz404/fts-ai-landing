@@ -3,6 +3,7 @@ import { character } from "../content/character";
 import { demoHref, demoImage, demos } from "../content/demos";
 import { useLang } from "../i18n/lang";
 import LinkOrBox from "../components/LinkOrBox";
+import { interactiveUrl } from "../content/links";
 
 const previewIds = ["wedding-venue-ai", "hotel-ai", "restaurant-ai"];
 
@@ -85,6 +86,7 @@ const Hero = ({ onAskAi }: { onAskAi: () => void }) => {
             <LinkOrBox
               key={demo.id}
               href={demoHref(demo, lang)}
+              lpHref={interactiveUrl("/solutions", lang)}
               newTab
               hidden
               className={`absolute w-[64%] overflow-hidden rounded-2xl border-4 border-white bg-white shadow-[0_24px_48px_-24px_rgba(16,35,66,0.45)] transition-transform duration-300 hover:-translate-y-1 ${

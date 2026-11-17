@@ -2,8 +2,8 @@ import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import LinkOrBox from "../components/LinkOrBox";
 import { categories, demoHref, demoImage, demos, type CategoryId } from "../content/demos";
+import { interactiveUrl } from "../content/links";
 import { format, useLang } from "../i18n/lang";
-import { isLp } from "../page";
 
 type Filter = CategoryId | "all";
 
@@ -54,6 +54,7 @@ const Demos = () => {
               {/* Phones: compact row (thumbnail + text). sm and up: vertical card. */}
               <LinkOrBox
                 href={demoHref(demo, lang)}
+                lpHref={interactiveUrl("/solutions", lang)}
                 newTab
                 className="tile-hover group flex h-full items-center gap-3 overflow-hidden rounded-2xl border border-fts-line bg-white p-2.5 sm:flex-col sm:items-stretch sm:gap-0 sm:p-0"
               >
@@ -83,7 +84,7 @@ const Demos = () => {
                     {t.demos.try}
                     <ArrowUpRight aria-hidden className="h-4 w-4" />
                   </span>
-                  {!isLp && <span className="sr-only">{t.demos.newTab}</span>}
+                  <span className="sr-only">{t.demos.newTab}</span>
                 </div>
                 <ArrowUpRight aria-hidden className="mr-1 h-5 w-5 shrink-0 text-fts-blue sm:hidden" />
               </LinkOrBox>

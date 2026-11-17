@@ -45,6 +45,7 @@ const Solutions = () => {
               <li key={id}>
                 <LinkOrBox
                   href={interactiveUrl("/solutions", lang)}
+                  lpHref={interactiveUrl("/solutions", lang)}
                   newTab
                   className="tile-hover group flex h-full flex-col rounded-2xl border border-fts-line bg-white p-5"
                 >
@@ -65,7 +66,7 @@ const Solutions = () => {
                     {t.solutions.explore}
                     <ArrowUpRight aria-hidden className="h-4 w-4" />
                   </span>
-                  {!isLp && <span className="sr-only">{t.demos.newTab}</span>}
+                  <span className="sr-only">{t.demos.newTab}</span>
                 </LinkOrBox>
               </li>
             );

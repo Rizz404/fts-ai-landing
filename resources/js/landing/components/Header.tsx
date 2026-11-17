@@ -1,6 +1,6 @@
 import { CalendarCheck } from "lucide-react";
 import { useLang } from "../i18n/lang";
-import { ftsLogo, pageUrl } from "../content/links";
+import { ftsLogo, interactiveUrl, pageUrl } from "../content/links";
 import LangSwitch from "./LangSwitch";
 
 const Header = ({ page }: { page: "home" | "consultation" | "lp" }) => {
@@ -21,7 +21,16 @@ const Header = ({ page }: { page: "home" | "consultation" | "lp" }) => {
 
         <nav aria-label="Main" className="hidden md:block">
           <ul className="flex items-center gap-7 text-sm text-fts-ink">
-            <li><a href={pageUrl(home, lang, "#solutions")} className="hover:text-fts-navy">{t.nav.solutions}</a></li>
+            <li>
+              {/* On the LP the AI solutions menu opens the AI Solutions page of the interactive site. */}
+              {page === "lp" ? (
+                <a href={interactiveUrl("/solutions", lang)} target="_blank" rel="noopener noreferrer" className="hover:text-fts-navy">
+                  {t.nav.solutions}
+                </a>
+              ) : (
+                <a href={pageUrl(home, lang, "#solutions")} className="hover:text-fts-navy">{t.nav.solutions}</a>
+              )}
+            </li>
             <li><a href={pageUrl(home, lang, "#demos")} className="hover:text-fts-navy">{t.nav.demos}</a></li>
             <li><a href={pageUrl(home, lang, "#how")} className="hover:text-fts-navy">{t.nav.how}</a></li>
             <li>

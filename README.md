@@ -29,7 +29,7 @@ The AI solutions section (`resources/js/landing/sections/Solutions.tsx`) sends e
 
 The first three demos (Wedding AI, Hotel AI, Restaurant AI) are featured: they lead the list and the hero previews.
 
-`/lp` is the landing page version for ads (`window.FTS_PAGE = "lp"`, see `resources/js/landing/page.ts`). It renders the same showcase without demo links or other outbound links; the AI Consultant chat and the consultation page stay available.
+`/lp` is the landing page version for ads (`window.FTS_PAGE = "lp"`, see `resources/js/landing/page.ts`). It renders the same showcase, but every demo card, hero preview, AI category and the "AI solutions" menu opens the AI Solutions page of the interactive site (`https://fts-ai-lp.fts-tech.co.id/fts/solutions?lang=…`) instead of the individual demos. Other outbound links (footer, WhatsApp) stay off; the AI Consultant chat and the consultation page stay available. The official site shows this page at https://fts-tech.co.id/ai and /ailp.
 
 Demo links open in a new tab with the same language (`?lang=`). Set `brokenLangs` on a demo whose live site fails in a language; that demo then opens in Indonesian instead.
 
